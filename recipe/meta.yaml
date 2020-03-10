@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -26,7 +26,7 @@ requirements:
     - zlib
     - lcms2
     - jpeg
-    - llvm-openmp  # [osx]
+    # - llvm-openmp  # [osx]
     - libgomp      # [linux]
   run:
     - {{ pin_compatible('lcms2', max_pin='x.x') }} 
