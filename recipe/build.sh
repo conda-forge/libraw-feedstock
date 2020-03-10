@@ -3,9 +3,9 @@
 autoreconf --install
 
 if [ `uname` == Darwin ]; then
-	USE_OPENMP=false
+	USE_OPENMP=no
 else
-	USE_OPENMP=true
+	USE_OPENMP=yes
 fi;
 
 ./configure --prefix="${PREFIX}" --enable-openmp=$USE_OPENMP
