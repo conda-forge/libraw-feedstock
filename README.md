@@ -5,7 +5,7 @@ Home: http://www.libraw.org/
 
 Package license: LGPL-2.1-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Library for reading and processing of RAW digicam images.
 
@@ -28,7 +28,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/libraw-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/libraw-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
