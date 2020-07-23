@@ -33,8 +33,8 @@ requirements:
 
 test:
   commands:
-    - raw-identify -h
-#     - simple_dcraw -h
+#    - raw-identify -h
+#    - simple_dcraw -h
     - test -f ${PREFIX}/include/libraw/libraw.h  # [unix]
     - test -f ${PREFIX}/lib/libraw${SHLIB_EXT}  # [unix]
 
