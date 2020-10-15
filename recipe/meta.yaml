@@ -1,5 +1,5 @@
 {% set name = "libraw" %}
-{% set version = "0.20.1" %}
+{% set version = "0.20.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
-  sha256: e8e8e1327d7e86e5cd9a67672552b388ad4a8aa676594320502c1a4379d1a476
+  sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
 
 build:
   skip: true  # [win]
