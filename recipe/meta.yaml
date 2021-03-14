@@ -48,7 +48,7 @@ about:
   home: http://www.libraw.org/
   license: LGPL-2.1-only
   license_family: LGPL
-  license_file: LICENSE.LGPL
+  license_file: libraw/LICENSE.LGPL
   description: |
     LibRaw is a library for reading RAW files from digital photo cameras
     (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc, virtually all RAW formats are supported).
