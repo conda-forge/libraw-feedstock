@@ -6,22 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
-  sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
+  - url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
+    sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
 
+  - folder: cmake
+    url: https://github.com/LibRaw/LibRaw-cmake/archive/1480fb919f24e7d53ad7b3a8b1ca83401119e889.tar.gz
+    sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
+    
 build:
-  skip: true  # [win]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
 requirements:
   build:
-    - automake
-    - libtool
+    - automake  # [unix]
+    - libtool  # [unix]
     - pkg-config
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
+    - cmake  # [win]
   host:
     - zlib
     - lcms2
