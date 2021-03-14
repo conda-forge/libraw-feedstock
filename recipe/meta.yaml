@@ -6,7 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
+  - folder: libraw
+    url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
     sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
 
   - folder: cmake
