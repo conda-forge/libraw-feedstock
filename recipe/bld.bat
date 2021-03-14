@@ -1,9 +1,9 @@
 setlocal EnableDelayedExpansion
 
 :: Copy CMake files to the source directory
-xcopy /E %SRC_DIR%\cmake %SRC_DIR%
+xcopy /E cmake libraw
 
-cd %SRC_DIR%
+cd libraw
 mkdir build
 cd build
 
