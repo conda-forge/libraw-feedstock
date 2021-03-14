@@ -43,6 +43,9 @@ test:
 #    - simple_dcraw -h
     - test -f ${PREFIX}/include/libraw/libraw.h  # [unix]
     - test -f ${PREFIX}/lib/libraw${SHLIB_EXT}  # [unix]
+    - if exist %PREFIX%\\Library\\include\\libraw\\libraw.h (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\lib\\raw.lib (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\bin\\raw.dll (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://www.libraw.org/
