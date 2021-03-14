@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd libraw
+
 autoreconf --install
 
 if [ `uname` == Darwin ]; then

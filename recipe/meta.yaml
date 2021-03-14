@@ -6,22 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
-  sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
+  - folder: libraw
+    url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
+    sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
 
+  - folder: cmake
+    url: https://github.com/LibRaw/LibRaw-cmake/archive/1480fb919f24e7d53ad7b3a8b1ca83401119e889.tar.gz
+    sha256: 55b3c301e8a708c00dc51abb09fdaa095c7272f8d220d1c25d7f075367cb6d60
+    
 build:
-  skip: true  # [win]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
 requirements:
   build:
-    - automake
-    - libtool
+    - automake  # [unix]
+    - libtool  # [unix]
     - pkg-config
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
+    - cmake  # [win]
   host:
     - zlib
     - lcms2
@@ -37,12 +43,15 @@ test:
 #    - simple_dcraw -h
     - test -f ${PREFIX}/include/libraw/libraw.h  # [unix]
     - test -f ${PREFIX}/lib/libraw${SHLIB_EXT}  # [unix]
+    - if exist %PREFIX%\\Library\\include\\libraw\\libraw.h (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\lib\\raw.lib (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\bin\\raw.dll (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://www.libraw.org/
   license: LGPL-2.1-only
   license_family: LGPL
-  license_file: LICENSE.LGPL
+  license_file: libraw/LICENSE.LGPL
   description: |
     LibRaw is a library for reading RAW files from digital photo cameras
     (CRW/CR2, NEF, RAF, DNG, MOS, KDC, DCR, etc, virtually all RAW formats are supported).
@@ -51,3 +60,4 @@ about:
 extra:
   recipe-maintainers:
     - wolfv
+    - traversaro
