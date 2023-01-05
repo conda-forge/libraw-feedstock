@@ -1,5 +1,5 @@
 {% set name = "libraw" %}
-{% set version = "0.20.2" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name }}
@@ -8,14 +8,14 @@ package:
 source:
   - folder: libraw
     url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
-    sha256: 02df7d403b34602b769bb38e5bf7d4258e075eeefbe980b6832e6e1491989d60
+    sha256: 686899632de347e01ef27b9a4d186b800384968f2d2fd7e7c2ab182fab1ea9d0
 
   - folder: cmake
-    url: https://github.com/LibRaw/LibRaw-cmake/archive/1480fb919f24e7d53ad7b3a8b1ca83401119e889.tar.gz
-    sha256: 55b3c301e8a708c00dc51abb09fdaa095c7272f8d220d1c25d7f075367cb6d60
+    url: https://github.com/LibRaw/LibRaw-cmake/archive/6e26c9e73677dc04f9eb236a97c6a4dc225ba7e8.tar.gz
+    sha256: d0ecc870bb395ca05d4de61314d092437bb37afac1e17131cc64c58e57369a11
 
 build:
-  number: 2
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 

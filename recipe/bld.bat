@@ -5,6 +5,7 @@ copy cmake\CMakeLists.txt libraw
 mkdir libraw\cmake
 mkdir libraw\cmake\data
 mkdir libraw\cmake\modules
+copy cmake\cmake\*.cmake.in libraw\cmake
 copy cmake\cmake\data\*.cmake libraw\cmake\data
 copy cmake\cmake\modules\*.cmake libraw\cmake\modules
 
