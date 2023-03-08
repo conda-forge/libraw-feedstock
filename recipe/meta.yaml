@@ -15,7 +15,7 @@ source:
     sha256: d0ecc870bb395ca05d4de61314d092437bb37afac1e17131cc64c58e57369a11
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -31,7 +31,7 @@ requirements:
   host:
     - zlib
     - lcms2
-    - jpeg
+    - libjpeg-turbo
     # - llvm-openmp  # [osx]
     - libgomp      # [linux]
 
