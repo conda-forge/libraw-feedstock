@@ -1,4 +1,4 @@
-l{% set name = "libraw" %}
+{% set name = "libraw" %}
 {% set version = "0.21.2" %}
 
 package:
