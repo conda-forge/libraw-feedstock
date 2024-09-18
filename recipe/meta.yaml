@@ -1,4 +1,4 @@
-{% set name = "libraw" %}
+l{% set name = "libraw" %}
 {% set version = "0.21.2" %}
 
 package:
@@ -25,6 +25,7 @@ requirements:
     - libtool  # [unix]
     - pkg-config
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
     - cmake  # [win]
