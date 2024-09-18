@@ -12,7 +12,7 @@ source:
 
   - folder: cmake
     url: https://github.com/LibRaw/LibRaw-cmake/archive/eb98e4325aef2ce85d2eb031c2ff18640ca616d3.tar.gz
-    sha256: d0ecc870bb395ca05d4de61314d092437bb37afac1e17131cc64c58e57369a11
+    sha256: 3cd218bf6d1254de86e27269541277fbfc5bae57a9002ce0b46fbe2a97088b43
 
 build:
   number: 0
