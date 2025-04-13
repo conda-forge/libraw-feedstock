@@ -1,5 +1,5 @@
 {% set name = "libraw" %}
-{% set version = "0.21.3" %}
+{% set version = "0.21.4" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   - folder: libraw
     url: https://github.com/LibRaw/LibRaw/archive/{{ version }}.tar.gz
-    sha256: dc3d8b54e333d9d5441336049db255d14b27f19bd326a306cf5aea866806780a
+    sha256: 8baeb5253c746441fadad62e9c5c43ff4e414e41b0c45d6dcabccb542b2dff4b
 
   - folder: cmake
     url: https://github.com/LibRaw/LibRaw-cmake/archive/eb98e4325aef2ce85d2eb031c2ff18640ca616d3.tar.gz
