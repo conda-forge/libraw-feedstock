@@ -22,8 +22,6 @@ lcms2:
 - '2'
 libjpeg_turbo:
 - '3'
-libraw:
-- '0.21'
 target_platform:
 - linux-ppc64le
 zip_keys:
