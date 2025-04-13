@@ -12,6 +12,8 @@ lcms2:
 - '2'
 libjpeg_turbo:
 - '3'
+libraw:
+- '0.21'
 target_platform:
 - win-64
 zlib:
