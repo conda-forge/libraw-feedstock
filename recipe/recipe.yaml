@@ -36,6 +36,7 @@ requirements:
   host:
     - zlib
     - lcms2
+    - jasper
     - libjpeg-turbo
     - ${{ "libgomp" if linux }}
   run_exports:
