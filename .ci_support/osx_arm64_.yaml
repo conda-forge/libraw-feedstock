@@ -18,6 +18,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '18'
+jasper:
+- '4'
 lcms2:
 - '2'
 libjpeg_turbo:
