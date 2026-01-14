@@ -1,6 +1,6 @@
 context:
   name: libraw
-  version: "0.21.4"
+  version: "0.22.0"
 
 package:
   name: ${{ name }}
@@ -9,7 +9,7 @@ package:
 source:
   - target_directory: libraw
     url: https://github.com/LibRaw/LibRaw/archive/${{ version }}.tar.gz
-    sha256: 8baeb5253c746441fadad62e9c5c43ff4e414e41b0c45d6dcabccb542b2dff4b
+    sha256: 5a11327a9cef2496d6a4335e8da30a1604460b6c545a30fe7588cf4c00a0fcae
 
   - target_directory: cmake
     url: https://github.com/LibRaw/LibRaw-cmake/archive/eb98e4325aef2ce85d2eb031c2ff18640ca616d3.tar.gz
@@ -45,7 +45,7 @@ requirements:
 
 tests:
   - package_contents:
-      include: 
+      include:
         - libraw/libraw.h
       lib:
         - raw
